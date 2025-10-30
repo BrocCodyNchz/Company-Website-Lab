@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+  <link rel="stylesheet" href="/css/app.css"> 
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <h1>Our Work</h1>
+    <% if (work && work.length > 0) { %>
+        <ul>
+            <% work.forEach(job => { %>
+                <li>
+                    <h2><%= job.name %></h2>
+                    <p><strong>Details:</strong> <%= job.discription %></p>
+                </li>  
+            <% }); %>
+        </ul>
+    <% } %>
+</body>
+</html>

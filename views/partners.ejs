@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners</title>
+  <link rel="stylesheet" href="/css/app.css"> 
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <h1>Our Partners</h1>
+        <% if (partners && partners.length > 0) { %>
+            <ul>
+                <% partners.forEach(partner => { %>
+                    <li>
+                        <a href="<%= partner.website %>"><%=partner.name %></a>
+                    </li>  
+                <% }); %>
+            </ul>
+        <% } %>
+</body>
+</html>

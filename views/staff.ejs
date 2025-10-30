@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff</title>
+  <link rel="stylesheet" href="/css/app.css"> 
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <h1>Our Staff</h1>
+    <% if (staff && staff.length > 0) { %>
+        <ul>
+            <% staff.forEach(person => { %>
+                <li>
+                    <h2><%= person.name %></h2>
+                    <p><strong>Email:</strong> <%= person.email %></p>
+                    <p><strong>Phone:</strong> <%= person.phone %></p>
+                </li>  
+            <% }); %>
+        </ul>
+    <% } %>
+</body>
+</html>
